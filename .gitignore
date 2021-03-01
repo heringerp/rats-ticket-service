@@ -1,0 +1,6 @@
+/target
+db/db.sqlite
+*~
+*.swp
+*.swo
+/uploads

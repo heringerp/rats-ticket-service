@@ -1,0 +1,150 @@
+body{
+  height: 60vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  font-family: sans-serif;
+  margin-top: 5%;
+}
+
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: blue;
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+
+.action{
+  width: 20%;
+  height: 55%;
+  border: 1px solid black;
+}
+.Text{
+  margin-left: 18%;
+  margin-top: 10%;
+}
+
+.Text2{
+  margin-left: 10%;
+  margin-top: 8px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.form{
+  width: 50%;
+  position: relative;
+  height: 50px;
+  padding-bottom: 2px;
+  margin-left: 25%;
+}
+
+.form input {
+  width: 100%;
+  height: 50%;
+  color: black;
+  padding-top: 20px;
+  border: none;
+  outline: none;
+  margin-top: 15px;
+}
+
+.form label{
+  position: absolute;
+  bottom: 0px;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-bottom: 1px solid black;
+  bottom: -10px;
+  overflow: hidden;
+}
+
+.form label::after{
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: -1px;
+  height: 100%;
+  width: 100%;
+  border-bottom: 3px solid blue;
+  transform: translateX(-100%);
+  transition: transform 0.5s ease;
+}
+
+.content-name{
+  position: absolute;
+  bottom: 5px;
+  left: 0px;
+  transition: all 0.5s ease;
+}
+
+.form input:focus + .label-name .content-name,
+.form input:valid + .label-name .content-name{
+  transform: translateY(-150%);
+  font-size: 14px;
+  color: blue;
+}
+
+.form input:focus + .label-name::after,
+.form input:valid + .label-name::after {
+  transform: translateX(0%);
+}
+
+.button {
+  border-radius: 4px;
+  background-color: blue;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 16px;
+  padding: 20px;
+  width: 100px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin-left: 25%;
+  margin-top: 10px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+  right: 10%;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+#login a{
+  font-family: sans-serif;
+  margin-left: 38%;
+  color: blue;
+  text-decoration: none;
+  font-size: 13px;
+}

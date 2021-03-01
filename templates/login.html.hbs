@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width" />
+      <title>RATS: Ticket System</title>
+      <link rel="stylesheet" href="/css/login.css">
+   </head>
+   <body>
+     <h1>RATS: Login</h1>
+                {{#if flash}}
+                    <p>Meldung: {{ flash }}</p>
+                {{else}}
+                    <p></p>
+                {{/if}}
+     <form action="/login" method="post" accept-charset="utf-8" class="action">
+       <div class="Text"><p>Melden Sie sich an um fortzufahren</p></div>
+       <div class="form">
+         <input type="text" name="username"  required value=""/>
+         <label for="username" class="label-name">
+           <span class="content-name">Email-Adresse:</span>
+         </label>
+       </div>
+       <div class="form">
+         <input type="password" name="password"  required value=""/>
+         <label for="password" class="label-name">
+           <span class="content-name">Passwort:</span>
+         </label><br>
+         <button class="button" type="submit" value="signup"><span>Anmelden</span></button><br>
+         <a class="Text2" href="/signup">Stattdessen registrieren</a>
+       </div>
+     </form>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width" />
+      <title>RATS: Ticket System</title>
+      <link rel="stylesheet" href="/css/createstyle.css">
+  </head>
+  <body>
+      <div class="container">
+          <div class="row">
+              <h1>RATS: Neue Anfrage stellen</h1>
+              <p>Um eine Anfrage zu stellen, laden Sie bitte die Vorlage herunter und laden dann das ausgefüllte Dokument hier wieder hoch.</p>
+              <a id="Download" href="/template.doc">Vorlage herunterladen</a>
+            </br>
+              <form action="/new" method="post" enctype="multipart/form-data">
+                <div class="form">
+                      <input type="text" name="description" required autocomplete="off"/>
+                      <label for="description" class="label-name">
+                        <span class="content-name">Beschreibung</span>
+                      </label>
+                </div>
+                <div class="form">
+                      <input type="text" name="approver_email" id="approver_email" required/>
+                      <label for="approver" class="label-name">
+                        <span class="content-name2">Genehmiger</span>
+                      </label>
+                </div>
+</br>
+                  <div>
+                    <input type="file" name="upload_file" id="upload_file" class="btn" required/>
+                    </div>
+      <script src="js/create_ticket.js">
+      </script>
+    </br>
+                      <input class="Buttons" type="reset"  value="Eingaben löschen">
+                      <input class="Buttons" type="submit" value="Ticket hinzufügen">
+              </form>
+              <form action="/">
+                <button class="Buttons" type="submit">Abbrechen</button>
+              </form>
+          </div>
+      </div>
+  </body>
+</html>

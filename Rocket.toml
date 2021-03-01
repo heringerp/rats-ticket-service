@@ -1,0 +1,9 @@
+[global.databases.sqlite_database]
+url = "db/db.sqlite"
+
+[development]
+port = 8000
+
+[production]
+port = 8000
+template_dir = "/opt/rats/templates/"

@@ -1,0 +1,12 @@
+[Unit]
+Description=Simple Ticket Service
+
+[Service]
+User=www-data
+Group=www-data
+WorkingDirectory=/opt/rats
+Environment="DATABASE_URL=db/db.sqlite"
+ExecStart=/opt/rats/ticket_service
+
+[Install]
+WantedBy=multi-user.target
